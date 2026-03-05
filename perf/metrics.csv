@@ -1,1 +1,1 @@
-timestamp,prompt_type,latency,ttfb,tokens_generated,tokens_per_second,response_length,concurrency
+timestamp,prompt_type,latency,ttfb,tokens_generated,tokens_per_second,response_length,concurrency,gpu_utilization
