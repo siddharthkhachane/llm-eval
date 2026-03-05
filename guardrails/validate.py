@@ -8,7 +8,7 @@ import requests
 
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "llama3"
+MODEL_NAME = "phi3:mini"
 RUNS = 10
 MC_REGEX = re.compile(r"\b([ABCD])\b", re.IGNORECASE)
 
