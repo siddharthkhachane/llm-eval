@@ -14,10 +14,16 @@ from lm_eval.api.model import LM
 class OllamaLM(LM):
     """lm-eval wrapper that calls a local FastAPI endpoint backed by Ollama."""
 
-    def __init__(self, endpoint: str = "http://localhost:8000/generate", timeout: int = 120):
+    def __init__(
+        self,
+        endpoint: str = "http://localhost:8000/generate",
+        timeout: int = 90,
+        max_retries: int = 2,
+    ):
         super().__init__()
         self.endpoint = endpoint
         self.timeout = timeout
+        self.max_retries = max_retries
         self.logger = logging.getLogger("eval_runner.cache")
         self.cache_path = Path(__file__).resolve().parent / "cache.json"
         self.prompt_cache: dict[str, str] = self._load_cache()
@@ -55,18 +61,32 @@ class OllamaLM(LM):
         return hashlib.md5(prompt.encode("utf-8")).hexdigest()
 
     def _call_generate(self, prompt: str) -> str:
-        try:
-            response = requests.post(
-                self.endpoint,
-                json={"prompt": prompt},
-                timeout=self.timeout,
-            )
-            response.raise_for_status()
-            payload = response.json()
-        except requests.exceptions.RequestException as exc:
-            raise RuntimeError(f"Failed calling local generation endpoint {self.endpoint}: {exc}") from exc
-        except ValueError as exc:
-            raise RuntimeError("Generation endpoint returned invalid JSON.") from exc
+        last_exc: Exception | None = None
+        for attempt in range(1, self.max_retries + 2):
+            try:
+                response = requests.post(
+                    self.endpoint,
+                    json={"prompt": prompt},
+                    timeout=self.timeout,
+                )
+                response.raise_for_status()
+                payload = response.json()
+                break
+            except requests.exceptions.ReadTimeout as exc:
+                last_exc = exc
+                if attempt <= self.max_retries + 1:
+                    self.logger.warning("Read timeout (attempt %s). Retrying...", attempt)
+                continue
+            except requests.exceptions.RequestException as exc:
+                raise RuntimeError(
+                    f"Failed calling local generation endpoint {self.endpoint}: {exc}"
+                ) from exc
+            except ValueError as exc:
+                raise RuntimeError("Generation endpoint returned invalid JSON.") from exc
+        else:
+            raise RuntimeError(
+                f"Failed calling local generation endpoint {self.endpoint}: {last_exc}"
+            ) from last_exc
 
         output = payload.get("response")
         if not isinstance(output, str):

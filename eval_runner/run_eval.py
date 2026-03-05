@@ -76,8 +76,9 @@ def main() -> None:
                 limit=run_limit,
             )
         except Exception as exc:
-            logger.error("Task failed: %s (%s)", task, exc)
-            raise
+            logger.error("Task failed: %s (%s) -- skipping", task, exc)
+            summary[task] = {"accuracy": None}
+            continue
         task_metrics = evaluation.get("results", {}).get(task, {})
         summary[task] = {"accuracy": extract_accuracy(task_metrics)}
 
