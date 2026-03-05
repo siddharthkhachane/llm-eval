@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nNow solve this item:\n\nContext:\nA man is sitting on a roof. he\n\nOptions:\nA) is using wrap to wrap a pair of skis.\nB) is ripping level tiles off.\nC) is holding a rubik's cube.\nD) starts pulling up roofing on a roof.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "D"
+  },
+  {
+    "id": 1,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nA man is sitting on a roof. he\n\nOptions:\nA) is using wrap to wrap a pair of skis.\nB) is ripping level tiles off.\nC) is holding a rubik's cube.\nD) starts pulling up roofing on a roof.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: D\n\nNow solve this item:\n\nContext:\nA lady walks to a barbell. She bends down and grabs the pole. the lady\n\nOptions:\nA) swings and lands in her arms.\nB) pulls the barbell forward.\nC) pulls a rope attached to the barbell.\nD) stands and lifts the weight over her head.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "D"
+  },
+  {
+    "id": 2,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nA lady walks to a barbell. She bends down and grabs the pole. the lady\n\nOptions:\nA) swings and lands in her arms.\nB) pulls the barbell forward.\nC) pulls a rope attached to the barbell.\nD) stands and lifts the weight over her head.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: D\n\nNow solve this item:\n\nContext:\nTwo women in a child are shown in a canoe while a man pulls the canoe while standing in the water, with other individuals visible in the background. the child and a different man\n\nOptions:\nA) are then shown paddling down a river in a boat while a woman talks.\nB) are driving the canoe, they go down the river flowing side to side.\nC) sit in a canoe while the man paddles.\nD) walking go down the rapids, while the man in his helicopter almost falls and goes out of canoehood.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "C"
+  },
+  {
+    "id": 3,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nTwo women in a child are shown in a canoe while a man pulls the canoe while standing in the water, with other individuals visible in the background. the child and a different man\n\nOptions:\nA) are then shown paddling down a river in a boat while a woman talks.\nB) are driving the canoe, they go down the river flowing side to side.\nC) sit in a canoe while the man paddles.\nD) walking go down the rapids, while the man in his helicopter almost falls and goes out of canoehood.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: C\n\nNow solve this item:\n\nContext:\nA boy is running down a track. the boy\n\nOptions:\nA) runs into a car.\nB) gets in a mat.\nC) lifts his body above the height of a pole.\nD) stands on his hands and springs.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "C"
+  },
+  {
+    "id": 4,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nA boy is running down a track. the boy\n\nOptions:\nA) runs into a car.\nB) gets in a mat.\nC) lifts his body above the height of a pole.\nD) stands on his hands and springs.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: C\n\nNow solve this item:\n\nContext:\nThe boy lifts his body above the height of a pole. The boy lands on his back on to a red mat. the boy\n\nOptions:\nA) turns his body around on the mat.\nB) gets up from the mat.\nC) continues to lift his body over the pole.\nD) wiggles out of the mat.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "B"
+  },
+  {
+    "id": 5,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nThe boy lifts his body above the height of a pole. The boy lands on his back on to a red mat. the boy\n\nOptions:\nA) turns his body around on the mat.\nB) gets up from the mat.\nC) continues to lift his body over the pole.\nD) wiggles out of the mat.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: B\n\nNow solve this item:\n\nContext:\nThe boy lands on his back on to a red mat. The boy gets up from the mat. the boy\n\nOptions:\nA) starts doing spins.\nB) celebrates by clapping and flexing both arms.\nC) is dancing on the mat.\nD) does jump jacks on his stick.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "B"
+  },
+  {
+    "id": 6,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nThe boy lands on his back on to a red mat. The boy gets up from the mat. the boy\n\nOptions:\nA) starts doing spins.\nB) celebrates by clapping and flexing both arms.\nC) is dancing on the mat.\nD) does jump jacks on his stick.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: B\n\nNow solve this item:\n\nContext:\nA man is standing in front of a camera. He starts playing a harmonica for the camera. he\n\nOptions:\nA) begins to play the harmonica with his body while looking at the camera.\nB) seems to be singing while playing the harmonica.\nC) rocks back and forth to the music as he goes.\nD) painted a fence in front of the camera.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "C"
+  },
+  {
+    "id": 7,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nA man is standing in front of a camera. He starts playing a harmonica for the camera. he\n\nOptions:\nA) begins to play the harmonica with his body while looking at the camera.\nB) seems to be singing while playing the harmonica.\nC) rocks back and forth to the music as he goes.\nD) painted a fence in front of the camera.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: C\n\nNow solve this item:\n\nContext:\nA cartoon animation video is shown with people wandering around and rockets being shot. two men\n\nOptions:\nA) fight robots of evil and ends with a to be continued.\nB) are then shown in closeups shooting a shot put.\nC) push a child in a speedboat in the water.\nD) look in the cameraman's eye and smile.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "A"
+  },
+  {
+    "id": 8,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nA cartoon animation video is shown with people wandering around and rockets being shot. two men\n\nOptions:\nA) fight robots of evil and ends with a to be continued.\nB) are then shown in closeups shooting a shot put.\nC) push a child in a speedboat in the water.\nD) look in the cameraman's eye and smile.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: A\n\nNow solve this item:\n\nContext:\nA man is holding a pocket knife while sitting on some rocks in the wilderness. then he\n\nOptions:\nA) opens a can of oil put oil on the knife, and puts oil on a knife and press it through a can filled with oil then cuts several pieces from the sandwiches.\nB) takes a small stone from the flowing river and smashes it on another stone.\nC) uses the knife to shave his leg.\nD) sand the rocks and tops them by using strong pressure.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "B"
+  },
+  {
+    "id": 9,
+    "prompt": "You are a reasoning assistant.\n\nChoose the most logical ending.\n\nFew-shot examples:\n\nExample 1:\nContext:\nA man is holding a pocket knife while sitting on some rocks in the wilderness. then he\n\nOptions:\nA) opens a can of oil put oil on the knife, and puts oil on a knife and press it through a can filled with oil then cuts several pieces from the sandwiches.\nB) takes a small stone from the flowing river and smashes it on another stone.\nC) uses the knife to shave his leg.\nD) sand the rocks and tops them by using strong pressure.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>\nAnswer: B\n\nNow solve this item:\n\nContext:\nThen he takes a small stone from the flowing river and smashes it on another stone. He starts to crush the small stone to smaller pieces. he\n\nOptions:\nA) cuts the center stone in half and blow it on to make it bigger.\nB) grind it hard to make the pieces smaller.\nC) eventually brings it back into view and adds it to the smaller ones to make a small triangular shaped piece.\nD) starts to party with them and throw the pieces by hand while they celebrate.\n\nThink step-by-step then answer with a single letter.\n\nReturn:\nAnswer: <LETTER>",
+    "answer": "B"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "accuracy": 0.2,
+  "total_questions": 5,
+  "correct_predictions": 1,
+  "predictions": [
+    {
+      "id": 0,
+      "prediction_letter": "A",
+      "prediction_text": "is using wrap to wrap a pair of skis.",
+      "correct_answer": "starts pulling up roofing on a roof.",
+      "is_correct": false
+    },
+    {
+      "id": 1,
+      "prediction_letter": "D",
+      "prediction_text": "stands and lifts the weight over her head.",
+      "correct_answer": "stands and lifts the weight over her head.",
+      "is_correct": true
+    },
+    {
+      "id": 2,
+      "prediction_letter": "A",
+      "prediction_text": "are then shown paddling down a river in a boat while a woman talks.",
+      "correct_answer": "sit in a canoe while the man paddles.",
+      "is_correct": false
+    },
+    {
+      "id": 3,
+      "prediction_letter": "A",
+      "prediction_text": "runs into a car.",
+      "correct_answer": "lifts his body above the height of a pole.",
+      "is_correct": false
+    },
+    {
+      "id": 4,
+      "prediction_letter": "A",
+      "prediction_text": "turns his body around on the mat.",
+      "correct_answer": "gets up from the mat.",
+      "is_correct": false
+    }
+  ]
+}

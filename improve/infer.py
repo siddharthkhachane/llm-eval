@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import argparse
 import json
+import logging
 import re
 from pathlib import Path
 from typing import Any
@@ -48,7 +50,22 @@ def call_model(prompt: str) -> str:
     return output
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run HellaSwag inference via local endpoint.")
+    parser.add_argument(
+        "--max-items",
+        type=int,
+        default=None,
+        help="Limit number of questions for quick runs.",
+    )
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
+    logging.basicConfig(level=logging.INFO, format="%(message)s")
+    logger = logging.getLogger("improve.infer")
+
     with INPUT_PATH.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -59,11 +76,16 @@ def main() -> None:
     correct = 0
     rows: list[dict[str, Any]] = []
 
-    for idx, row in enumerate(data):
+    max_items = len(data) if args.max_items is None else min(args.max_items, len(data))
+    logger.info("Running inference for %s item(s)", max_items)
+
+    for idx, row in enumerate(data[:max_items]):
+        logger.info("Processing item %s/%s", idx + 1, max_items)
         context = str(row.get("context", "")).strip()
         options = row.get("ending_options", [])
         gold_answer = row.get("correct_answer", "")
         if not isinstance(options, list) or len(options) < 4:
+            logger.info("Skipping item %s (invalid options)", idx + 1)
             continue
 
         prompt = format_prompt(context, options[:4])
@@ -102,6 +124,7 @@ def main() -> None:
         json.dump(results, f, indent=2, ensure_ascii=False)
 
     print(f"Accuracy: {accuracy:.2f}")
+    logger.info("Saved results to %s", OUTPUT_PATH)
 
 
 if __name__ == "__main__":
